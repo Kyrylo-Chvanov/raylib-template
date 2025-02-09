@@ -17,14 +17,14 @@ Game::Game(const int width, const int height, const char *title, const int fps) 
 void Game::Run() {
   while (!WindowShouldClose()) {
     Update();
-    BeginDrawing();
-      Draw();
-    EndDrawing();
+    Draw();
   }
 }
 
 void Game::Draw() const {
-  ClearBackground(BLACK);
+  BeginDrawing();
+    ClearBackground(BLACK);
+  EndDrawing();
 }
 
 void Game::Update() {
